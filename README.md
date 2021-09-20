@@ -11,9 +11,9 @@ npm install --save nedb-promises-session-store
 
 ## Usage
 
-```ts
-import makeStore from 'nedb-promises-session-store';
-import your_session_module from '...';
+```js
+const session = require('express-session');
+const makeStore = require('nedb-promises-session-store').default;
 
 makeStore({
   connect: your_session_module,
@@ -78,13 +78,13 @@ For more details about the underlying automatic compaction functionality, please
 
 ## Middleware Integration
 
-```ts
+```js
 const sharedSecretKey = 'yoursecret';
-import express from 'express';
-import session from 'express-session';
-import makeStore from 'nedb-session-store';
+const express = require('express');
+const session = require('express-session');
+const makeStore = require('nedb-promises-session-store').default;
 
-import app = express();
+const app = express();
 
 app.use(
   session({

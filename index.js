@@ -237,4 +237,3 @@ var makeStore = function (_options) {
     return store;
 };
 exports["default"] = makeStore;
-//# sourceMappingURL=index.js.map

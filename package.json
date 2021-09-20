@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/Noramire/nedb-session-store.git"
   },
+  "main": "index.js",
   "keywords": [
     "nedb",
     "nedb-promises",
