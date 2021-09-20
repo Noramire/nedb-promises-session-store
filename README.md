@@ -1,6 +1,6 @@
 # nedb-promises-session-store
 
-A session store implementation for [Express](http://expressjs.com/) & [Connect](https://github.com/senchalabs/connect) backed by an [NeDB Promises](https://github.com/louischatriot/nedb) datastore (either in-memory or file-persisted).
+A session store implementation for [Express](http://expressjs.com/) & [Connect](https://github.com/senchalabs/connect) backed by an [NeDB Promises](https://github.com/bajankristof/nedb-promises) datastore (either in-memory or file-persisted).
 
 ## Getting Started
 
