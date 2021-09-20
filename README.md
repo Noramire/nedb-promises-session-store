@@ -16,7 +16,7 @@ const session = require('express-session');
 const makeStore = require('nedb-promises-session-store').default;
 
 makeStore({
-  connect: your_session_module,
+  connect: session,
   filename: 'path_to_nedb.db'
 });
 ```
