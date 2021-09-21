@@ -70,11 +70,9 @@ var TWO_WEEKS = 14 * ONE_DAY;
  * @param {Function}           options.onload                 Optional callback to be invoked when the datastore is loaded and ready.
  * @returns {Store}  your new Store
  */
-var makeStore = function (_options) {
+var makeStore = function (options) {
     var _a, _b;
-    var options = __assign({}, _options);
     var defaultExpiry = (_a = options.defaultExpiry) !== null && _a !== void 0 ? _a : TWO_WEEKS;
-    // Store.call(_this, options);
     var datastore = nedb_promises_1["default"].create(__assign(__assign(__assign({}, options), { autoload: true, timestampData: true, onload: function (error) {
             if (error) {
                 store.emit('error', error);
@@ -92,7 +90,7 @@ var makeStore = function (_options) {
         var autoCompactInterval = Math.min(Math.max(options.autoCompactInterval, 5000), ONE_DAY);
         datastore.persistence.setAutocompactionInterval(autoCompactInterval);
     }
-    var parentStore = ((_b = _options.connect.Store) !== null && _b !== void 0 ? _b : _options.connect.session.Store).prototype;
+    var parentStore = ((_b = options.connect.Store) !== null && _b !== void 0 ? _b : options.connect.session.Store).prototype;
     var store = __assign(__assign(__assign({}, events_1.EventEmitter.prototype), parentStore), { set: function (sid, session, callback) { return __awaiter(void 0, void 0, void 0, function () {
             var expirationDate, sess, error_1;
             var _a;

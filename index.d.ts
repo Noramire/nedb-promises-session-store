@@ -30,5 +30,5 @@ declare type DatastoreOptions = DatastoreOptionsXOR & {
  * @param {Function}           options.onload                 Optional callback to be invoked when the datastore is loaded and ready.
  * @returns {Store}  your new Store
  */
-declare const makeStore: (_options: DatastoreOptions) => Store;
+declare const makeStore: (options: DatastoreOptions) => Store;
 export default makeStore;

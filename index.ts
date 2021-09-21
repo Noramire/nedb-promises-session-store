@@ -48,14 +48,8 @@ type SessionUnit = {
  * @param {Function}           options.onload                 Optional callback to be invoked when the datastore is loaded and ready.
  * @returns {Store}  your new Store
  */
-
-const makeStore = (_options: DatastoreOptions): Store => {
-  const options = { ..._options };
-
+const makeStore = (options: DatastoreOptions): Store => {
   const defaultExpiry = options.defaultExpiry ?? TWO_WEEKS;
-
-  // Store.call(_this, options);
-
   const datastore = Datastore.create({
     ...options,
     autoload: true,
@@ -81,7 +75,7 @@ const makeStore = (_options: DatastoreOptions): Store => {
     datastore.persistence.setAutocompactionInterval(autoCompactInterval);
   }
 
-  const parentStore = (_options.connect.Store ?? _options.connect.session.Store).prototype;
+  const parentStore = (options.connect.Store ?? options.connect.session.Store).prototype;
   const store: Store = {
     ...EventEmitter.prototype,
     ...parentStore,
