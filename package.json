@@ -1,6 +1,6 @@
 {
   "name": "nedb-promises-session-store",
-  "version": "1.1.2",
+  "version": "1.0.0",
   "description": "A session store implementation for Connect & Express backed by an NeDB Promises datastore",
   "repository": {
     "type": "git",

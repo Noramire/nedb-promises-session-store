@@ -1,6 +1,8 @@
 # nedb-promises-session-store
 
-A session store implementation for [Express](http://expressjs.com/) & [Connect](https://github.com/senchalabs/connect) backed by an [NeDB Promises](https://github.com/bajankristof/nedb-promises) datastore (either in-memory or file-persisted).
+A session store implementation for [Express](http://expressjs.com/) & [Connect](https://github.com/senchalabs/connect) backed by a [NeDB Promises](https://github.com/bajankristof/nedb-promises) datastore (either in-memory or file-persisted).
+
+Previously this code was made by [James M. Greene](https://github.com/JamesMGreene), but I did a lot of changes, I rewrote it on TypeScript for nedb-promises which is based on [@seald-io/nedb](https://github.com/seald/nedb) package to solve some vulnerability issues.
 
 ## Getting Started
 
@@ -11,9 +13,11 @@ npm install --save nedb-promises-session-store
 
 ## Usage
 
-```js
+```ts
 const session = require('express-session');
 const makeStore = require('nedb-promises-session-store').default;
+// on Typescript you should import it like this
+// import makeStore from 'nedb-promises-session-store';
 
 makeStore({
   connect: session,
@@ -103,6 +107,3 @@ app.use(
   })
 );
 ```
-
-## Notice
-Previously this code was made by [James M. Greene](https://github.com/JamesMGreene), but I did a lot of changes, I rewrote it on TypeScript for nedb-promises which is based on [@seald-io/nedb](https://github.com/seald/nedb) package to solve some vulnerability issues.
