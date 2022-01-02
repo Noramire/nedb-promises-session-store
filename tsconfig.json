@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES3",
+    "target": "ES5",
     "module": "commonjs",
     "allowJs": true,
     "strict": true,
@@ -10,12 +10,12 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "noEmit": false,
+    "emitDeclarationOnly": true,
     "isolatedModules": true,
     "declaration": true,
     "typeRoots": ["./node_modules/@types"],
     "sourceMap": false,
   },
-  "compileOnSave": true,
   "include": ["index.ts"],
   "exclude": ["node_modules"]
 }

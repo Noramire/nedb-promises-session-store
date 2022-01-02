@@ -31,4 +31,4 @@ declare type DatastoreOptions = DatastoreOptionsXOR & {
  * @returns {Store}  your new Store
  */
 declare const makeStore: (options: DatastoreOptions) => Store;
-export default makeStore;
+export = makeStore;

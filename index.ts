@@ -175,4 +175,4 @@ const makeStore = (options: DatastoreOptions): Store => {
   return store;
 };
 
-export default makeStore;
+export = makeStore;
